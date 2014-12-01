@@ -1,10 +1,10 @@
 /* Flexnav Base Styles */
 
-$nav_text: #222;
-$top_level: #a6a6a2;
-$second_level: #b2b2af;
-$third_level: #bfbfbc;
-$fourth_level: #cbcbc9;
+$nav_text: #fff;
+$top_level: #000;
+$second_level: #333;
+$third_level: #666;
+$fourth_level: #999;
 
 .flexnav {
 	overflow: hidden;
@@ -15,11 +15,14 @@ $fourth_level: #cbcbc9;
 	-moz-transition: all .5s ease-in-out;
 	-ms-transition: all .5s ease-in-out;
 	transition: all .5s ease-in-out, width 0, height 0, top 0, left 0;
+	&.opacity {
+		// opacity: 0;
+		padding-left: 0;
+	}
 
-  &.opacity {
-    // opacity: 0;
-    padding-left: 0;
-  }
+	ul {
+		padding-left: 0;
+	}
 
 	&.flexnav-show {
 		max-height: 2000px;
@@ -53,8 +56,12 @@ $fourth_level: #cbcbc9;
 		white-space: nowrap;
 
 		&:hover {
+			background: #fff;
 			color: $primary-color !important;
 		}
+		 &:focus {
+		 	background: #fff;
+		 }
 	}
 	li ul {
 		display: none;
@@ -92,7 +99,7 @@ $fourth_level: #cbcbc9;
 		top: 0;
 		right: 0;
 		width: 50px;
-		height: 50px;
+		height: 100%;
 		display: inline-block;
 		background: #acaca1;
 		background: rgba(0,0,0,.075);
@@ -116,6 +123,7 @@ $fourth_level: #cbcbc9;
 	color: $nav_text;
 	cursor: pointer;
 	border-bottom: 1px solid rgba(0,0,0,.2);
+	width: 100%;
 
 	&.one-page {
 		position: fixed;
@@ -132,7 +140,7 @@ $fourth_level: #cbcbc9;
 		right: 0;
 		width: 50px;
 		height: 50px;
-		display: inline-block;
+		display: none;
 		text-align: center;
 
 		.navicon {
@@ -143,7 +151,27 @@ $fourth_level: #cbcbc9;
 		}
 	}
 }
-
+.menu-button {
+	&:hover {
+		color: #fff;
+		i.navicon {
+			color: #fff;
+				&:after {
+					color: #fff;
+					content:'Menu';
+			}
+		}
+	}
+	i.navicon {
+		display: block !important;
+		position: relative;
+		right: 30px;
+		&:after {
+			color: #555;
+			content:'Menu';
+		}
+	}
+}
 @media all and (min-width: 800px) {
 	body.one-page {
 		padding-top: 70px;
@@ -165,11 +193,13 @@ $fourth_level: #cbcbc9;
 			display: block;
 			background-color: $top_level;
 			overflow: visible;
-      width: 20%;
+			width: 25%;
 		}
 		li a {
+			border-bottom: 1px solid #acaca1;
 			border-left: 1px solid #acaca1;
-			border-bottom: none;
+			border-right: 1px solid #acaca1;
+			border-top: 1px solid #acaca1;
 		}
 		li > ul {
 			position: absolute;

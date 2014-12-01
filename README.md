@@ -15,7 +15,7 @@ What's Inside?
 
 Neat extends bourbon and provides a nice and lightweight grid framework as a base for this project. Refills and Bitters provide additional styling and UI elements. I suggest you visit each of these projects to learn more and how to use them.
 
-* Underscores (_s) based theme. There's smarter folks than me building great sh*t (http://underscores.me)  
+* Underscores (_s) based theme. There's smarter folks than me building great sh*t (http://underscores.me)
 
 * Sass. We're using it and to update this theme you should be cozy with it or get ready to learn how to use. As of the initial writing of this ReadMe, I've been using Sass like a piece of shit asshole. I don't know what the fuck I'm doing. So if you do, please feel free to school a chump! If you don't know Sass, you should definitely jump in. The water's fine and you'll thank me later. I accept thanks in burritos, doritos, fritos and cheetos only.
 
@@ -23,11 +23,10 @@ Neat extends bourbon and provides a nice and lightweight grid framework as a bas
 
 * Gulpjs Task Automation — This has been a biggy! Lots of work done and yet to-do. Your gulpjs file will help automate nifty
 tasks such as autoprefixing, compiling and minifying Sass files; cleaning up your theme directory and even packaging/zipping
-your theme! Cool. Right? 
+your theme! Cool. Right?
 
 * Flexnav Menu System and Hover Intent
 * TGM PLugin Activation
-* Genericons/Dashicons
 * Bower
 * Pull requests welcome...
 
@@ -35,7 +34,25 @@ your theme! Cool. Right?
 Getting Started
 ---------------
 
-~~I'll be coming back to this later~~
+* #### Prerequisites
+  * You'll need to download and install [Node](http://nodejs.com)
+  * You will also need to download and install [Sass](http://sass-lang.org/install)
+
+* #### Getting and Installing the Theme
+  * The first thing you’ll want to do is grab a copy of the theme —
+**git clone git://github.com/digisavvy/some-like-it-neat.git** – or [download](http://github.com/digisavvy/some-like-it-neat) it and then rename the directory to the name of your theme or website.
+
+* #### Install Gulpjs and Plugins
+  Once you have Node, Sass and the theme installed, the next step is simple enough.
+  * Open a command prompt/terminal and navigate to your theme's root directory and run this command: **npm install**
+ _(note - you may have to run this command as admin or sudo)_
+
+* #### Gulp Tasks
+There are a couple of tasks built into Some Like it Neat to help get you going.
+  * **gulp** This command simply starts up Gulp and watches your scss, js and php filder for changes, writes them out and refreshes the browser for you.
+  * **gulp build** This command removes unneccessary files and packs up the required files into a nice and neat, installable, zip package. Honestly, this is here because I was uploading my theme to the WP.org uploader so many times... Epitome of the laze.
+
+Each task such as 'js', 'images' or 'browser-sync' may be started individually. Although, the only one of them you'd do that with is the 'images' task since that's not auto-optimizing at the moment.
 
 ### Theme Hook Alliance
 ---------------
@@ -53,100 +70,100 @@ Why use these in this project? It's a philosophical thing. I've used Foundation 
 ---------------
 I don't see why not. ~~I haven't done it yet.~~ ( I'm using a child theme on http://alexhasnicehair.com ) But with the addition of Theme Hook Alliance, I'd say 'Some Like it Neat' would make for a good Parent Theme for your project and certainly more ideal if you're going to make significant edits (and why wouldn't you? By default it looks like pooh!).
 
-What I recommend is that you generate your child theme, setup your child theme folder, style.css file. Additionally, I think it's just easier to copy the 'library' folder from the parent and place it into the child theme. 
+What I recommend is that you generate your child theme, setup your child theme folder, style.css file. Additionally, I think it's just easier to copy the 'library' folder from the parent and place it into the child theme.
 
 ### Getting Started aka What You Need to Know...
 ---------------
-Well, to use this theme, you'll definitely want to learn Sass. It's what Bourbon and Neat are built on top of and is at the core of this theme's build. 
+Well, to use this theme, you'll definitely want to learn Sass. It's what Bourbon and Neat are built on top of and is at the core of this theme's build.
 
 ### Folder Structure
 ---------------
 I haven't listed out every single file here; but I have listed out the files that you'll most likely work with during
 a project.
 
-Theme Root
- |    ├── assets
-│    |   ├── css
- |     |    |   ├── style-style.css
- |     |    |   ├── style.css
-│    |   ├── fonts
-│    |   ├── images
-│    |    |   └── originals 
-│    |   ├── js
-│    |    |   └── vendor 
-│   ├── sass
-│    |   └── base (Bitters)
-│    |   └── bourbon 
-│    |   └── font-awesome 
-│    |   └── components 
- |     |    |   ├── _buttons.scss
- |     |    |   ├── _dashicons.scss
- |     |    |   ├── _flexnav.scss
- |     |    |   ├── _navigation.scss
- |     |    |   ├── _genericons.scss
- |     |    |   ├── _ui-bourbon.scss
- |     |    |   └── _variables.scss
-│    |   └── layouts 
- |     |    |   ├── _content.scss
- |     |    |   ├── _footer.scss
- |     |    |   ├── _header.scss
- |     |    |   ├── _navigation.scss
- |     |    |   ├── _normalize.scss
- |     |    |   ├── _sidebar.scss
- |     |    |   ├── _structure.scss
- |     |    |   └── _typography.scss
-│    |   └── neat 
- |    ├── _flexnav.scss
- |    ├── _grid-settings.scss
- |    └── style.scss
-├── library
-│   ├── languages
-│    |    ├── digistarter.pot
-│   ├── vendors
-│   │   ├── js
-│   │   ├── tgm-plugin-activation
-│   │   ├── tha-theme-hooks
-│   │   └── wp-customizer
-│   ├── custom-header.php
-│   ├── extras.php
-│   ├── jetpack.php
-│   └── template-tags.php
-├── page-templates
-│   ├── partials
- |     |   ├── content-aside.php
- |     |   ├── content-audio.php
- |     |   ├── content-chat.php
- |     |   ├── content-gallery.php
- |     |   ├── content-image.php
- |     |   ├── content-link.php
- |     |   ├── content-none.php
- |     |   ├── content-page.php
- |     |   ├── content-quote.php
- |     |   ├── content-single.php
- |     |   ├── content-status.php
- |     |   ├── content-video.php
- |     |   └── content.php
- |    ├── template-full-width.php
- |    ├── template-left-col.php
- |    └── template-right-col.php
-├── 404.php
-├── archive.php
-├── comments.php
-├── footer.php
-├── functions.php
-├── gulpfile.js
-├── header.php
-├── index.php
-├── license.txt
-├── package.json
-├── page.php
-├── README.md
-├── rtl.css
-├── search.png
-├── searchform.php
-├── sidebar.php
-├── single.php
-└── style.css
+<pre style="max-height: 300px;"><code>Theme Root
+    │    ├── assets
+    │    │   ├── css
+    │    │        ├── style-min.css
+    │    │        ├── style.css
+    │    │   ├── js
+    │    │        ├── production-min.js
+    │    │        ├── production.js
+    │    ├── sass
+    │    |   └── base (Bitters)
+    │    |   └── bourbon
+    │    |   └── font-awesome
+    │    |   └── components
+    |    |    |   ├── _buttons.scss
+    |    |    |   ├── _dashicons.scss
+    |    |    |   ├── _flexnav.scss
+    |    |    |   ├── _navigation.scss
+    |    |    |   ├── _ui-bourbon.scss
+    |    |    |   └── _variables.scss
+    │    |    └── layouts
+    |    |    |   ├── _content.scss
+    |    |    |   ├── _footer.scss
+    |    |    |   ├── _header.scss
+    |    |    |   ├── _navigation.scss
+    |    |    |   ├── _normalize.scss
+    |    |    |   ├── _sidebar.scss
+    |    |    |   ├── _structure.scss
+    |    |    |   └── _typography.scss
+    │    |    └── neat
+    |    ├── _flexnav.scss
+    |    ├── _grid-settings.scss
+    |    └── style.scss
+    ├── library
+    │   ├── languages
+    │   │   ├── digistarter.pot
+    │   ├── vendors
+    │   │   ├── js
+    │   │   ├── tgm-plugin-activation
+    │   │   ├── tha-theme-hooks
+    │   │   └── wp-customizer
+    │   ├── custom-header.php
+    │   ├── extras.php
+    │   ├── jetpack.php
+    │   └── template-tags.php
+    ├── page-templates
+    │     ├── partials
+    |     |   ├── content-aside.php
+    |     |   ├── content-audio.php
+    |     |   ├── content-chat.php
+    |     |   ├── content-gallery.php
+    |     |   ├── content-image.php
+    |     |   ├── content-link.php
+    |     |   ├── content-none.php
+    |     |   ├── content-page.php
+    |     |   ├── content-quote.php
+    |     |   ├── content-single.php
+    |     |   ├── content-status.php
+    |     |   ├── content-video.php
+    |     |   └── content.php
+    |     ├── template-full-width.php
+    |     ├── template-left-col.php
+    |     └── template-right-col.php
+  │   ├── tasks
+   |        └── build.js
+    ├── .bowerrc
+    ├── 404.php
+    ├── archive.php
+    ├── comments.php
+    ├── footer.php
+    ├── functions.php
+    ├── gulpfile.js
+    ├── header.php
+    ├── index.php
+    ├── license.txt
+    ├── package.json
+    ├── page.php
+    ├── README.md
+    ├── rtl.css
+    ├── search.png
+    ├── searchform.php
+    ├── sidebar.php
+    ├── single.php
+    └── style.css</code></pre>
 
 ### General Credits and Thanks
 ---------------
@@ -179,23 +196,18 @@ This theme is based on Underscores, (C) 2012-2013 Automattic, Inc.
 Flexnav, Copyright 2014 Jason Weaver.
  - Source: http://jasonweaver.name/lab/flexiblenavigation/
  - License: GNU GPL, Version 2 (or later)
- - License URI: https://github.com/indyplanets/flexnav/blob/master/LICENSE
-
-Genericons, Copyright 2013 Automattic, Inc.
- - Source: http://www.genericons.com
- - License: GNU GPL, Version 2 (or later)
- - License URI: /font/license.txt
+ - License URI: https://github.com/
 
 TGM Plugin Activation, Copyright 2014 Thomas Griffin Media, Inc.
  - Source: http://tgmpluginactivation.com/
  - License: GNU GPL, Version 2 (or later)
  - License URI: http://tgmpluginactivation.com/#license
- 
-Theme Hook Alliance 
+
+Theme Hook Alliance
  - Source: https://github.com/zamoose/themehookalliance/blob/master/tha-theme-hooks.php
  - License: GNU GPL, Version 2 (or later)
- - License URI: 
- 
+ - License URI:
+
 Bourbon
  - Source: http://bourbon.io, © 2013 thoughtbot
  - License: The MIT License
@@ -210,14 +222,9 @@ Neat
   - Source: http://gulpjs.com, Copyright (c) 2014 Fractal <contact@wearefractal.com>
   - License: The MIT License
   - License URI: https://github.com/gulpjs/gulp/blob/master/LICENSE
- 
+
 Hover Intent
  - Source: https://github.com/tristen/hoverintent
  - License: the MIT
  - License URI: license.txt
-
- Font awesome
- - Source: http://fontawesome.io
- - License: SIL, OFL
- - License URI: https://github.com/FortAwesome/Font-Awesome/blob/master/README.md
 

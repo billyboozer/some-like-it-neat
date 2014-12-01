@@ -1,7 +1,10 @@
 .site-branding {
-	text-align: center; 
-	
+	text-align: center;
+
 	.site-title {
+		font-family: $title;
+		padding: 40px;
+
 		@include media($sm) {
 			@include fontSize(35px);
 		}
@@ -11,11 +14,17 @@
 		@include media($md) {
 			@include fontSize(75px);
 		}
-		font-family: $title;
+
+		a,a:visited {
+			line-height: 1;
+		}
+
 	}
 
 	.site-description {
+		padding: 25px 0;
 		@include fontSize(20px);
+
 		@include media($sm) {
 			@include fontSize(15px);
 		}
